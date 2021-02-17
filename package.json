@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -17,7 +17,6 @@
   "dependencies": {
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
-    "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-netlify-cms": "^4.10.0",
     "gatsby-plugin-offline": "^3.10.0",
     "gatsby-plugin-react-helmet": "^3.10.0",
