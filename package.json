@@ -18,11 +18,14 @@
     "extends": "react-app"
   },
   "dependencies": {
+    "@cookes-hooks/use-delayed-function-queue": "^1.1.0",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
+    "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-netlify-cms": "^4.10.0",
     "gatsby-plugin-offline": "^3.10.0",
     "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^3.2.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-source-filesystem": "^2.11.0",
@@ -35,6 +38,10 @@
   },
   "devDependencies": {
     "eslint": "^7.20.0",
-    "eslint-config-react-app": "^6.0.0"
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1"
   }
 }
