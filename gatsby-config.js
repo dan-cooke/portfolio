@@ -1,7 +1,10 @@
 module.exports = {
 	siteMetadata: {
-		title: "Dan Cooke's Portfolio",
+		title: 'dancooke',
+		titleTemplate: '%s | Portfolio',
 		description: 'A frontend developer who likes to tinker',
+		url: 'https://dancooke.codes',
+		image: 'src/images/pixelbeanie_large.png',
 	},
 	plugins: [
 		'gatsby-plugin-netlify-cms',
