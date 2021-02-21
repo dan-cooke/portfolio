@@ -6,7 +6,7 @@ import ChatAvatar from './ChatAvatar/ChatAvatar'
 import ChatMessages from './ChatMessages/ChatMessages'
 import ChatInput from './ChatInput/ChatInput'
 
-const Chat = ({ onMinimize, onMaximize }) => {
+const Chat = () => {
 	const [typing, setTyping] = useState(false)
 	const [messages, setMessages] = useState([])
 

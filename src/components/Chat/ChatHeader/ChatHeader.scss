@@ -9,4 +9,13 @@
         width: 10px;
         height: 10px;
     }
+
+    button#min {
+        float: right;
+    }
+
+    button#max {
+        float: right;
+        transform: translate(65px);
+    }
 }

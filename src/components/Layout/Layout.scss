@@ -20,6 +20,7 @@ body {
     overflow-y: hidden;
     width: 100%;
     height: 100%;
+
     @include for-phone-only {
         grid-auto-flow: rows;
         grid-template-rows: 100vh auto;
@@ -27,7 +28,6 @@ body {
             'main'
             'chat';
 
-        
         &.chat-expanded {
             transform: translate(0, -100vh);
         }
@@ -38,24 +38,40 @@ body {
     }
     @include for-tablet-portrait-up {
         grid-auto-flow: rows;
-        grid-template-rows: 1fr;
+        grid-template-rows: 100vh auto;
         grid-template-areas: 
             'main'
-            'chat' 
+            'chat';
+
+        &.chat-expanded {
+            transform: translate(0, -100vh);
+        }
+
+        &:not(.chat-expanded) {
+            transform: translate(0, 0vh);
+        }
     }
 
     @include for-tablet-landscape-up {
         grid-auto-flow: column;
         grid-template-columns: 30vw 100vw;
         grid-template-areas: 
-            'chat' 'main';
+            'chat main';
+
+        &.chat-expanded {
+            transform: translate(0vw);
+        }
+
+        &:not(.chat-expanded) {
+            transform: translate(-31vw);
+        }
     }
 
     &--chat{
         grid-area: chat;
     }
 
-    &--main-content {
+    &--main__content {
         grid-area: main;
     }
 }

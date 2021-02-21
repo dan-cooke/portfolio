@@ -1,9 +1,13 @@
 import * as React from 'react'
-import Chat from '../components/Chat/Chat'
 import Layout from '../components/Layout/Layout'
+import LayoutProvider from '../context/LayoutContext/LayoutProvider'
 
 const IndexPage = () => {
-	return <Layout>Hello</Layout>
+	return (
+		<LayoutProvider>
+			<Layout>Hello</Layout>
+		</LayoutProvider>
+	)
 }
 
 export default IndexPage

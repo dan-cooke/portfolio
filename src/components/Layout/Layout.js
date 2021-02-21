@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Chat from '../Chat/Chat'
 import Navbar from '../Navbar/Navbar'
 import SEO from '../SEO/SEO'
 import './Layout.scss'
 import { motion } from 'framer-motion'
+import LayoutContext from '../../context/LayoutContext/LayoutContext'
 
 export default function Layout({ children }) {
-	const [isChatExpanded, setIsChatExpanded] = useState(true)
+	const { isChatExpanded } = useContext(LayoutContext)
 	return (
 		<React.Fragment>
 			<Helmet>
@@ -24,12 +25,7 @@ export default function Layout({ children }) {
 						damping: 30,
 					}}
 				>
-					<Chat
-						onMinimize={() => setIsChatExpanded(false)}
-						onMaximize={() => {
-							setIsChatExpanded(true)
-						}}
-					/>
+					<Chat />
 				</motion.div>
 				<div className='site__layout--main__content'>
 					<Navbar />
