@@ -1,0 +1,15 @@
+
+.splash {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    background-image: url('../../images/avatar_bg2.png');
+    display: block;
+
+    &__avatar {
+        width: 664px;
+        height: 100%;
+        margin: 0;
+
+    }
+}

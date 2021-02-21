@@ -2,11 +2,10 @@ import React from 'react'
 import { FaWindowMinimize, FaWindowMaximize } from 'react-icons/fa'
 import './ChatHeader.scss'
 import { useSelector, useDispatch } from 'react-redux'
-import { hideChat, showChat } from '../../../store/chatSlice'
+import { hideChat, showChat } from '../chatSlice'
 
 const ChatHeader = () => {
 	const isChatExpanded = useSelector((state) => state.chat.isChatExpanded)
-
 	const dispatch = useDispatch()
 	return (
 		<div className='chat__header'>

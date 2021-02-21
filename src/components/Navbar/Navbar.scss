@@ -1,13 +1,15 @@
 
 .navbar {
-    display: grid;
-    grid-auto-flow: column;
-    width: fit-content;
-    grid-column-gap: 25%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
     margin-top: 40px;
+    z-index: 9999;
+    width: 75%;
     
     li {
         list-style: none;
+        width: max-content;
         font-size: 2rem;
     }
 

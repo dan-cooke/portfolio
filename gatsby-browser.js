@@ -5,7 +5,14 @@ import store from './src/store/store'
 
 /* eslint-disable react/display-name */
 export const wrapPageElement = ({ element, props }) => {
-	return <Layout {...props}>{element}</Layout>
+	// Disable the chat on the homepag
+	const onHomePage = element.props.path === '/'
+
+	return (
+		<Layout chatDisabled={onHomePage} {...props}>
+			{element}
+		</Layout>
+	)
 }
 
 export const wrapRootElement = ({ element }) => {

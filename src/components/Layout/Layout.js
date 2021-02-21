@@ -7,7 +7,7 @@ import './Layout.scss'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 
-const Layout = (props) => {
+const Layout = ({ children, chatDisabled }) => {
 	const isChatExpanded = useSelector((state) => state.chat.isChatExpanded)
 
 	return (
@@ -16,7 +16,11 @@ const Layout = (props) => {
 				<title>dan.</title>
 			</Helmet>
 			<SEO />
-			<div className={`site__layout ${isChatExpanded ? 'chat-expanded' : ''}`}>
+			<div
+				className={`site__layout ${
+					isChatExpanded && !chatDisabled ? 'chat-expanded' : ''
+				}`}
+			>
 				<motion.div
 					className='site__layout--chat'
 					layout
@@ -30,7 +34,7 @@ const Layout = (props) => {
 				</motion.div>
 				<div className='site__layout--main__content'>
 					<Navbar />
-					{props.children}
+					{children}
 				</div>
 			</div>
 		</React.Fragment>

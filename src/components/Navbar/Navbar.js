@@ -9,6 +9,14 @@ const Navbar = () => {
 		<ul className='navbar'>
 			<li>
 				<Link to='/' className={pathname === '/' && 'selected'}>
+					Home
+				</Link>
+			</li>
+			<li>
+				<Link
+					to='/projects'
+					className={pathname.includes('projects') && 'selected'}
+				>
 					Projects
 				</Link>
 			</li>
@@ -17,7 +25,12 @@ const Navbar = () => {
 					to='/resume'
 					className={pathname.includes('resume') && 'selected'}
 				>
-					Resume
+					Résumé
+				</Link>
+			</li>
+			<li>
+				<Link to='/blog' className={pathname.includes('blog') && 'selected'}>
+					Blog
 				</Link>
 			</li>
 			<li>

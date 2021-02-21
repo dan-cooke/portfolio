@@ -1,7 +1,8 @@
 import * as React from 'react'
+import Splash from '../components/Splash/Splash'
 
-const IndexPage = () => {
-	return <h1>Projects</h1>
+const Home = () => {
+	return <Splash />
 }
 
-export default IndexPage
+export default Home
