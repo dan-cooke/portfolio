@@ -1,0 +1,13 @@
+import React from 'react'
+import Layout from './src/components/Layout/Layout'
+import { Provider } from 'react-redux'
+import store from './src/store/store'
+
+/* eslint-disable react/display-name */
+export const wrapPageElement = ({ element, props }) => {
+	return <Layout {...props}>{element}</Layout>
+}
+
+export const wrapRootElement = ({ element }) => {
+	return <Provider store={store}>{element}</Provider>
+}

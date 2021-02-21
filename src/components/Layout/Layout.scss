@@ -10,9 +10,13 @@
 }
 body {
     height: 100vh;
+    margin: 0;
     overflow-y: hidden;
 }
 
+a {
+    text-decoration: none;
+}
 
 .site__layout {
     display: grid;

@@ -1,0 +1,27 @@
+
+.navbar {
+    display: grid;
+    grid-auto-flow: column;
+    width: fit-content;
+    grid-column-gap: 25%;
+    margin-top: 40px;
+    
+    li {
+        list-style: none;
+        font-size: 2rem;
+    }
+
+    a {
+        color: black;
+    }
+    a.selected {
+        font-weight: bold;
+
+        &::before {
+            content:url('../../images/pixelbeanie.png');
+            position: fixed;
+            top: 20px;
+
+        }
+    }
+}
