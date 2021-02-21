@@ -5,67 +5,21 @@ b {
     font-weight: 500;
 }
 .chat {
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'avatar'
+        'messages'
+        'input';
+    grid-template-rows: 30px auto 1fr 50px;
+
+    animation: 1s ease-in-out 0s;
+
+    height: 98vh;
     border: 1px solid black;
     border-radius: 10px;
 
-    &__header {
-        padding: 5px;
-        .chat__status {
-            display: flex;
-            float: right;
-            vertical-align: middle;
-            .status__icon {
-                display: inline-block;
-                margin-right: 5px;
-                margin-left: 5px;
-                background: green;
-                border-radius: 100%;
-                width: 10px;
-                height: 10px;
-            }
-        }
-    }
 
-    &__avatar {
-        border: 1px solid black;
-        width: 100%;
-    }
-    &__messages {
-        padding-top: 2%;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        @include for-phone-only {
-            min-height: 600px;
-            max-height: 600px;
-        }
-        @include for-tablet-portrait-up {
-            min-height: 450px;
-            max-height: 450px;
-        }
-        @include for-desktop-up {
-            min-height: 300px;
-            max-height: 300px;
-        }
-
-
-        &:hover {
-            overflow-y: overlay;
-        }
-        &::-webkit-scrollbar {
-            width: 1rem;
-        }
-        &::-webkit-scrollbar-track {
-            background-color: rgba(0,0,0,0);
-        }
-        &::-webkit-scrollbar-thumb:vertical {
-            background-color: darkgray;
-        }
-
-         // TODO: remove this when you implement proper chat bubble styling
-        div:nth-of-type(1) {
-            border-bottom-left-radius: 4px;
-        }
-    }
 
     &__input {
         width: 100%;
@@ -89,16 +43,7 @@ b {
     }
 
     .avatar--main {
-
-        @include for-phone-only {
-            width: 150px;
-        }
-        @include for-tablet-portrait-up {
-            width: 200px;
-        }
-        @include for-desktop-up {
-            width: 400px;
-        }
+        width: 175px;
     }
 }
 

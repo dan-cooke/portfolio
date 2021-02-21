@@ -1,15 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Message from '../Message/Message'
+import React, { useEffect, useState } from 'react'
 import useDelayedFunctionQueue from '@cookes-hooks/use-delayed-function-queue'
 import './Chat.scss'
-import Avatar from '../Avatar/Avatar'
+import ChatHeader from './ChatHeader/ChatHeader'
+import ChatAvatar from './ChatAvatar/ChatAvatar'
+import ChatMessages from './ChatMessages/ChatMessages'
+import ChatInput from './ChatInput/ChatInput'
 
-const Chat = () => {
+const Chat = ({ onMinimize, onMaximize }) => {
 	const [typing, setTyping] = useState(false)
 	const [messages, setMessages] = useState([])
 
 	const { add, run } = useDelayedFunctionQueue()
-	const messageContainer = useRef()
 
 	const sendMessageFromMe = (body) => {
 		setTyping(true)
@@ -99,21 +100,11 @@ const Chat = () => {
 		run()
 	}, [])
 
-	const [currentMessage, setCurrentMessage] = useState('')
-	const onMessageChange = (event) => {
-		setCurrentMessage(event.target.value)
-	}
-	useEffect(() => {
-		messageContainer.current.scrollTop = messageContainer.current.scrollHeight
-	}, [messages])
-
-	const onSendMessage = (event) => {
-		setCurrentMessage('')
-		event.preventDefault()
+	const onSendMessage = (message) => {
 		setMessages((prevMessages) => [
 			...prevMessages,
 			{
-				body: currentMessage,
+				body: message,
 				me: false,
 			},
 		])
@@ -121,35 +112,10 @@ const Chat = () => {
 	}
 	return (
 		<div className='chat'>
-			<div className='chat__header'>
-				<b>Daniel Cooke</b>
-				<span className='chat__status'>
-					<b>Status</b>: <span className='status__icon'></span>Looking for work!
-				</span>
-			</div>
-			<div className='chat__avatar'>
-				<Avatar className='avatar--main' />
-			</div>
-			<div className='chat__messages' ref={messageContainer}>
-				{messages.map((message) => (
-					<Message key={message.body} user={message.user} me={message.me}>
-						{message.body}
-					</Message>
-				))}
-				{typing ? (
-					<Message typing me>
-						...
-					</Message>
-				) : null}
-			</div>
-			<form className='chat__input' onSubmit={onSendMessage}>
-				<input
-					type='textarea'
-					onChange={onMessageChange}
-					value={currentMessage}
-				/>
-				<button type='submit'>Send</button>
-			</form>
+			<ChatHeader />
+			<ChatAvatar />
+			<ChatMessages messages={messages} typing={typing} />
+			<ChatInput onSendMessage={onSendMessage} />
 		</div>
 	)
 }

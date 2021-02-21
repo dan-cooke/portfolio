@@ -3,11 +3,7 @@ import Chat from '../components/Chat/Chat'
 import Layout from '../components/Layout/Layout'
 
 const IndexPage = () => {
-	return (
-		<Layout>
-			<Chat />
-		</Layout>
-	)
+	return <Layout>Hello</Layout>
 }
 
 export default IndexPage

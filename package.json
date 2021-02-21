@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@cookes-hooks/use-delayed-function-queue": "^1.1.0",
+    "framer-motion": "^3.6.2",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-manifest": "^2.12.0",
@@ -34,6 +35,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
     "sass": "^1.32.7"
   },
   "devDependencies": {
