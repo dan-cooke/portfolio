@@ -13,6 +13,7 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-offline',
 		'gatsby-transformer-sharp',
+		'gatsby-background-image',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -39,6 +40,14 @@ module.exports = {
 				theme_color: `#a2466c`,
 				display: `standalone`,
 				icon: `src/images/pixelbeanie.png`,
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-web-font-loader',
+			options: {
+				google: {
+					families: ['Staatliches'],
+				},
 			},
 		},
 	],

@@ -1,15 +1,35 @@
 
+@import '../../sass/fonts.scss';    
 .splash {
     width: 100%;
     height: 75%;
-    display: flex;
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 35% 75%;
     background-image: url('../../images/avatar_bg2.png');
-    display: block;
 
     &__avatar {
-        width: 664px;
+        width: 100%;
         height: 100%;
-        margin: 0;
+    }
 
+    &__bio {
+        color: white;
+        word-wrap: break-word;
+        margin-top: auto;
+        h1,h2,h3 {
+            word-spacing: 1px;
+            margin: 0;
+            margin-block-end: 0;
+            margin-block-start: 0;
+            line-height: 4.5rem;
+            // -webkit-text-stroke: 2px black;
+            font-size: 6rem;
+
+            .last_updated {
+                font-size: 3rem;
+            }
+        }
     }
 }

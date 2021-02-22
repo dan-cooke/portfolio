@@ -80,3 +80,22 @@ a {
 h1,h2,h3,h4,h5 {
     font-family: 'Space Grotesk', sans-serif;
 }
+
+
+footer {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    h1 {
+
+        opacity: 0.1;
+    }
+    h2 {
+        opacity: 1;
+    }
+
+    a {
+        font-family: 'Staatliches' !important;
+    }
+    bottom: 0;
+}

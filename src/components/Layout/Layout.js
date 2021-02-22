@@ -6,6 +6,7 @@ import SEO from '../SEO/SEO'
 import './Layout.scss'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
+import '@fontsource/staatliches'
 
 const Layout = ({ children, chatDisabled }) => {
 	const isChatExpanded = useSelector((state) => state.chat.isChatExpanded)
@@ -37,6 +38,16 @@ const Layout = ({ children, chatDisabled }) => {
 					{children}
 				</div>
 			</div>
+			<footer>
+				<h1>
+					Note: this site is being actively developed. Everything you see is
+					subject to change. (Don't judge the FOUC yet 😭😭😭)
+				</h1>
+				<h2>
+					Watch me build the rest of this site on{' '}
+					<a href='https://www.twitch.tv/mtddan'>Twitch</a>
+				</h2>
+			</footer>
 		</React.Fragment>
 	)
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-const Contact = () => {
+const Blog = () => {
 	return (
 		<h1 style={{ width: '75%', textAlign: 'center' }}>
 			👷Under construction👷
@@ -7,4 +7,4 @@ const Contact = () => {
 	)
 }
 
-export default Contact
+export default Blog
