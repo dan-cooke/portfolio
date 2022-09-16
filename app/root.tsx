@@ -17,7 +17,7 @@ export const links: LinksFunction = () => [
 ];
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Daniel's CV",
+  title: "Daniel Cooke - Web Dev",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -30,11 +30,11 @@ export default function App() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Plus+Jakarta+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Plus+Jakarta+Sans:wght@400;700&family=Poppins:wght@400;700&family=Archivo+Black&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-purple-dark">
+      <body className="bg-gradient-to-b from-purple to-gray h-screen">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

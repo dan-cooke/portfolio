@@ -1,16 +1,13 @@
-import { Link } from "@remix-run/react";
-import { BrandGithub, BrandStackoverflow } from "tabler-icons-react";
-
 export const Navbar = () => {
   return (
-    <nav className="flex h-max w-full place-content-between bg-[#232323] px-4 align-middle drop-shadow-sm">
-      <Link to="/" className="text-yellow-300">
+    <nav className="py-4 fixed flex w-1/2 mr-8 lg:mr-32 place-content-end">
+      <a
+        href="/Daniel_Cookes_Resume_Sep_2022.pdf"
+        target="_blank"
+        className="font-mono text-white border border-white rounded-sm p-2 px-4 hover:text-primary hover:border-primary"
+      >
         Resume
-      </Link>
-      <div className="flex p-2" style={{ color: "white" }}>
-        <BrandGithub className="hover:cursor-pointer" />
-        <BrandStackoverflow className="hover:cursor-pointer" />
-      </div>
+      </a>
     </nav>
   );
 };
