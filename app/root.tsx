@@ -34,7 +34,10 @@ export default function App() {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-gradient-to-b from-purple to-gray">
+      <body
+        className="bg-gradient-to-b from-purple to-gray h-screen w-screen -z-20"
+        style={{ backgroundAttachment: "fixed" }}
+      >
         <Outlet />
         <ScrollRestoration />
         <Scripts />

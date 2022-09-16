@@ -10,10 +10,10 @@ export const CallToAction = () => {
     <div className="flex w-full h-screen">
       <motion.img
         src="/idle_large.gif"
-        className="absolute bottom-0 xl:static -z-10 opacity-10 xl:block -ml-32 w-300 h-5/6 mt-auto mb-0"
+        className="fixed bottom-0 xl:static -z-10 opacity-10 xl:block -ml-32  mt-auto mb-0"
       />
       <motion.section
-        className="grid gap-7 w-full xl:w-1/2 pt-32 xl:ml-auto xl:mr-0 h-1/4"
+        className="grid gap-7 w-full xl:w-1/2 pt-16 xl:pt-32 xl:ml-auto xl:mr-0 h-1/4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
