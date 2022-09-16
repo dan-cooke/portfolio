@@ -7,7 +7,7 @@ export default function Index() {
       <header className="flex place-content-end">
         <Navbar />
       </header>
-      <main className="ml-8 mr-8 lg:ml-32 lg:mr-32">
+      <main className="ml-4 mr-4 lg:ml-32 lg:mr-32">
         <CallToAction />
       </main>
     </>

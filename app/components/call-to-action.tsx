@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   BrandGithub,
   BrandLinkedin,
@@ -6,8 +6,6 @@ import {
   Mail,
 } from "tabler-icons-react";
 export const CallToAction = () => {
-  const scrollY = useMotionValue(0);
-
   return (
     <div className="flex w-full h-screen">
       <motion.img
@@ -19,16 +17,16 @@ export const CallToAction = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <sub className="font-mono text-primary text-xl ">
+        <sub className="font-mono text-primary text-lg xl:text-xl ">
           Hi there! My name is...
         </sub>
-        <h1 className="font-header text-white font-bold text-6xl">
+        <h1 className="font-header text-white font-bold text-4xl xl:text-6xl">
           Daniel Cooke
         </h1>
-        <h2 className="font-header text-secondary-text text-5xl">
+        <h2 className="font-header text-secondary-text text-3xl xl:text-5xl">
           I’m a professional web developer and hobbyist programmer.
         </h2>
-        <p className="text-secondary-text text-xl">
+        <p className="text-secondary-text text-lg xl:text-xl">
           I've been building rich user experiences since 2018 with a keen focus
           on code quality.
         </p>
@@ -36,7 +34,7 @@ export const CallToAction = () => {
           Check out my latest site...
         </h2>
         <a
-          className="text-6xl text-white hover:text-secondary-text flex align-baseline font-['Archivo_Black']"
+          className="text-4xl xl:text-6xl text-white hover:text-secondary-text flex align-baseline font-['Archivo_Black']"
           href="https://baggers.app"
           target="_blank"
         >
@@ -142,7 +140,7 @@ export const CallToAction = () => {
           BAGGERS
         </a>
 
-        <p className="mt-32 text-primary font-mono">Contact me...</p>
+        <p className="mt-16 text-primary font-mono">Contact me...</p>
         <div className="text-white flex gap-4">
           <a href="mailto:danielcooke1996@gmail.com" target="_blank">
             <Mail

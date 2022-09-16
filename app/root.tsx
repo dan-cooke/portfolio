@@ -34,7 +34,7 @@ export default function App() {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-gradient-to-b from-purple to-gray h-screen">
+      <body className="bg-gradient-to-b from-purple to-gray">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
