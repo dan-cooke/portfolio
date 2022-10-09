@@ -34,7 +34,7 @@ export const CallToAction = () => {
           Check out my latest site...
         </h2>
         <a
-          className="text-4xl xl:text-6xl text-white hover:text-secondary-text flex align-baseline font-['Archivo_Black']"
+          className="text-4xl xl:text-6xl text-white hover:text-secondary-text flex align-middle font-['Archivo_Black']"
           href="https://baggers.app"
           target="_blank"
         >
@@ -144,13 +144,13 @@ export const CallToAction = () => {
         <div className="text-white flex gap-4">
           <a href="mailto:danielcooke1996@gmail.com" target="_blank">
             <Mail
-              size={48}
+              size={32}
               className="hover:text-secondary-text hover:cursor-pointer"
             />
           </a>
           <a href="https://www.linkedin.com/in/daniel-cooke-a6a8b7111/">
             <BrandLinkedin
-              size={48}
+              size={32}
               className="hover:text-secondary-text hover:cursor-pointer"
             />
           </a>
@@ -159,13 +159,13 @@ export const CallToAction = () => {
             target="_blank"
           >
             <BrandStackoverflow
-              size={48}
+              size={32}
               className="hover:text-secondary-text hover:cursor-pointer"
             />
           </a>
           <a href="https://github.com/dan-cooke" target="_blank">
             <BrandGithub
-              size={48}
+              size={32}
               className="hover:text-secondary-text hover:cursor-pointer"
             />
           </a>
