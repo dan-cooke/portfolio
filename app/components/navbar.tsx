@@ -1,6 +1,6 @@
 export const Navbar = () => {
   return (
-    <nav className="py-4 fixed flex w-1/2 mr-8 lg:mr-32 place-content-end">
+    <nav className="py-4 fixed flex w-full lg:mr-8 lg:mr-32 md:place-content-end place-content-center">
       <a
         href="/Daniel_Cookes_Resume_October_2022.pdf"
         target="_blank"

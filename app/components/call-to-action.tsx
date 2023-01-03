@@ -13,7 +13,7 @@ export const CallToAction = () => {
         className="fixed bottom-0 xl:static -z-10 opacity-10 xl:block -ml-32  mt-auto mb-0"
       />
       <motion.section
-        className="grid gap-7 w-full xl:w-1/2 pt-16 xl:pt-32 xl:ml-auto xl:mr-0 h-1/4"
+        className="grid gap-7 w-full xl:w-1/2 pt-16 xl:pt-32 xl:ml-auto xl:mr-0 h-1/4 text-center lg:text-left"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -34,7 +34,7 @@ export const CallToAction = () => {
           Check out my latest site...
         </h2>
         <a
-          className="text-4xl xl:text-6xl text-white hover:text-secondary-text flex align-middle font-['Archivo_Black']"
+          className="text-4xl xl:text-6xl text-white hover:text-secondary-text flex align-middle font-['Archivo_Black'] text-center lg:text-left place-content-center lg:place-content-start"
           href="https://baggers.app"
           target="_blank"
         >
@@ -141,7 +141,7 @@ export const CallToAction = () => {
         </a>
 
         <p className="mt-16 text-primary font-mono">Contact me...</p>
-        <div className="text-white flex gap-4">
+        <div className="text-white flex gap-4 place-content-center lg:place-content-start">
           <a href="mailto:danielcooke1996@gmail.com" target="_blank">
             <Mail
               size={32}
