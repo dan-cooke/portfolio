@@ -8,11 +8,16 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import tailwindStylesheet from "./styles/tailwind.css";
+import fonts from "./styles/fonts.css";
 
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
     href: tailwindStylesheet,
+  },
+  {
+    rel: "stylesheet",
+    href: fonts,
   },
 ];
 export const meta: MetaFunction = () => ({
