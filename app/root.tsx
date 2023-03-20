@@ -22,7 +22,6 @@ export const links: LinksFunction = () => [
 ];
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Daniel Cooke - Web Dev",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -32,6 +31,42 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <title>Daniel Cooke - Full stack developer</title>
+        <meta name="title" content="Daniel Cooke - Full stack developer" />
+        <meta
+          name="description"
+          content="Frontend specialist with a computer science background and over 6 years of professional experience."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dancooke.codes" />
+        <meta
+          property="og:title"
+          content="Daniel Cooke - Full stack developer"
+        />
+        <meta
+          property="og:description"
+          content="Frontend specialist with a computer science background and over 6 years of professional experience."
+        />
+        <meta
+          property="og:image"
+          content="https://dancooke.codes/preview.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://dancooke.codes" />
+        <meta
+          property="twitter:title"
+          content="Daniel Cooke - Full stack developer"
+        />
+        <meta
+          property="twitter:description"
+          content="Frontend specialist with a computer science background and over 6 years of professional experience."
+        />
+        <meta
+          property="twitter:image"
+          content="https://dancooke.codes/preview.png"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
